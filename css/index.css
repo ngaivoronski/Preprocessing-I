@@ -1,1 +1,305 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* FONTS AND VARIABLES */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXk.ttf) format('truetype');
+}
+h1,
+h2,
+h3 {
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 900px) {
+  body {
+    width: 90%;
+  }
+}
+/* HEADER STYLE */
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+  }
+}
+header nav {
+  padding: 2em 0px;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0 1em;
+}
+/* TITLE CONTENT STYLE */
+.title-content {
+  background-color: gainsboro;
+}
+.title-content .picture-div {
+  width: 90%;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+@media (max-width: 900px) {
+  .title-content .picture-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.title-content .picture-div img {
+  width: 20em;
+  margin: 2em 2em 3em 0;
+}
+.title-content .picture-div h1 {
+  font-size: 3.5rem;
+}
+.title-content .picture-div h2 {
+  font-size: 1.5rem;
+}
+.title-content .picture-div hr {
+  border: 0.5px solid black;
+}
+.title-content .picture-div p {
+  width: 90%;
+}
+.title-content .picture-div button {
+  background-color: grey;
+  color: white;
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+/* ABOUT ME STYLE */
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+@media (max-width: 500px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.about-me h2 {
+  font-size: 2rem;
+}
+.about-me .brief-description {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .about-me .brief-description {
+    width: 90%;
+    margin: 0.5em 0;
+  }
+}
+.about-me .skills {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .about-me .skills {
+    width: 90%;
+    margin: 0.5em 0;
+  }
+}
+.about-me .skills table {
+  width: 100%;
+}
+.about-me .skills table td {
+  border: 1px solid lightgrey;
+  padding: 1em;
+}
+/* WORK HISTORY STYLE */
+.work-history h2 {
+  font-size: 2rem;
+}
+.work-history table {
+  width: 100%;
+  margin: 2em 0;
+}
+.work-history table tr {
+  border-top: 1px solid lightgrey;
+}
+.work-history table td {
+  padding: 1em 0.5em;
+}
+.work-history table .white-row {
+  background-color: white;
+}
+.work-history table .grey-row {
+  background-color: gainsboro;
+}
+/* FOOTER STYLE */
+footer {
+  background-color: grey;
+  color: white;
+  padding: 1em;
+  margin-top: 5em;
+}
+footer p {
+  text-align: center;
+}

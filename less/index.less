@@ -57,3 +57,173 @@ html, body {
     height: 100%;
 }
 
+/* FONTS AND VARIABLES */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Rubik&display=swap');
+
+@title-font: 'Rubik', sans-serif;
+@text-font: 'Roboto', sans-serif;
+
+.right-align() {
+	display: flex;
+	justify-content: flex-end;
+}
+.center-align() {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+}
+.vertical-align() {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.left-align() {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+h1, h2, h3 {
+	font-family: @title-font;
+}
+
+body {
+	font-family: @text-font;
+	width: 80%;
+	margin: auto;
+	@media (max-width: 900px) {
+		width: 90%;
+	}
+}
+
+/* HEADER STYLE */
+
+header {
+	.right-align();
+	@media (max-width: 500px) {
+		.center-align();
+	}
+	nav {
+		padding: 2em 0px;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+		padding: 0 1em;
+	}
+}
+
+/* TITLE CONTENT STYLE */
+
+.title-content {
+	background-color: gainsboro;
+	.picture-div {
+		width: 90%;
+		padding: 1em 0;
+		.center-align();
+		@media (max-width: 900px) {
+			.vertical-align();
+		}
+		img {
+			width: 20em;
+			margin: 2em 2em 3em 0;
+		}
+		h1 {
+			font-size: 3.5rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+		}
+		hr {
+			border: .5px solid black;
+		}
+		p {
+			width: 90%;
+		}
+		button {
+			background-color: grey;
+			color: white;
+			display: block;
+			margin: 10px 0;
+			cursor: pointer;
+			width: 200px;
+			height: 45px;
+			font-size: 1.5rem;
+			border-radius: 5px;
+		}
+	}
+}
+
+/* ABOUT ME STYLE */
+
+.about-me {
+	.left-align();
+	margin: 1em 0;
+	@media (max-width: 500px) {
+		.vertical-align();
+	}
+	h2 {
+		font-size: 2rem;
+	}
+
+	.brief-description {
+		width: 45%;
+		@media (max-width: 500px) {
+			width: 90%;
+			margin: .5em 0;
+		}
+	}
+	.skills {
+		width: 45%;
+		@media (max-width: 500px) {
+			width: 90%;
+			margin: .5em 0;
+		}
+		table {
+			width: 100%;
+			td {
+				border: 1px solid lightgrey;
+				padding: 1em;
+			}
+		}
+	}
+}
+
+/* WORK HISTORY STYLE */
+
+.work-history {
+	h2 {
+		font-size: 2rem;
+	}
+	table {
+		width: 100%;
+		margin: 2em 0;
+		tr {
+			border-top: 1px solid lightgrey;
+		}
+		td {
+			padding: 1em .5em;
+		}
+		.white-row {
+			background-color: white;
+		}
+		.grey-row {
+			background-color: gainsboro;
+		}
+	}
+}
+
+/* FOOTER STYLE */
+
+footer {
+	background-color: grey;
+	color: white;
+	padding: 1em;
+	margin-top: 5em;
+	p {
+		text-align: center;
+	}
+}
